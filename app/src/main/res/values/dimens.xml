@@ -1,0 +1,8 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="slidingmenu_offset">110dp</dimen><!-- Slidingmenu打开后，可见的背景的宽度 -->
+    <dimen name="shadow_width">10dp</dimen> <!-- Slidingmenu与背景的阴影的宽度 -->
+</resources>
