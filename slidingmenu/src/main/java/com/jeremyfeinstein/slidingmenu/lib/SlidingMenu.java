@@ -1,7 +1,5 @@
 package com.jeremyfeinstein.slidingmenu.lib;
 
-import java.lang.reflect.Method;
-
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -28,6 +26,8 @@ import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
 import com.jeremyfeinstein.slidingmenu.lib.CustomViewAbove.OnPageChangeListener;
+
+import java.lang.reflect.Method;
 
 public class SlidingMenu extends RelativeLayout {
 
@@ -100,14 +100,14 @@ public class SlidingMenu extends RelativeLayout {
 	 * the onOpened event occurs, that object's appropriate
 	 * method is invoked.
 	 *
-	 * @see OnOpenedEvent
+	 * see OnOpenedEvent
 	 */
 	public interface OnOpenedListener {
 
 		/**
 		 * On opened.
 		 */
-		public void onOpened();
+		void onOpened();
 	}
 
 	/**
@@ -119,14 +119,14 @@ public class SlidingMenu extends RelativeLayout {
 	 * the onClose event occurs, that object's appropriate
 	 * method is invoked.
 	 *
-	 * @see OnCloseEvent
+	 * see OnCloseEvent
 	 */
 	public interface OnCloseListener {
 
 		/**
 		 * On close.
 		 */
-		public void onClose();
+		void onClose();
 	}
 
 	/**
@@ -138,14 +138,14 @@ public class SlidingMenu extends RelativeLayout {
 	 * the onClosed event occurs, that object's appropriate
 	 * method is invoked.
 	 *
-	 * @see OnClosedEvent
+	 * see OnClosedEvent
 	 */
 	public interface OnClosedListener {
 
 		/**
 		 * On closed.
 		 */
-		public void onClosed();
+		void onClosed();
 	}
 
 	/**
@@ -159,7 +159,7 @@ public class SlidingMenu extends RelativeLayout {
 		 * @param canvas the canvas
 		 * @param percentOpen the percent open
 		 */
-		public void transformCanvas(Canvas canvas, float percentOpen);
+		void transformCanvas(Canvas canvas, float percentOpen);
 	}
 
 	/**
@@ -380,8 +380,8 @@ public class SlidingMenu extends RelativeLayout {
 	 *
 	 * @param view The desired content to display.
 	 */
-	public void setMenu(View v) {
-		mViewBehind.setContent(v);
+	public void setMenu(View view) {
+		mViewBehind.setContent(view);
 	}
 
 	/**
@@ -407,8 +407,8 @@ public class SlidingMenu extends RelativeLayout {
 	 *
 	 * @param view The desired content to display.
 	 */
-	public void setSecondaryMenu(View v) {
-		mViewBehind.setSecondaryContent(v);
+	public void setSecondaryMenu(View view) {
+		mViewBehind.setSecondaryContent(view);
 		//		mViewBehind.invalidate();
 	}
 
