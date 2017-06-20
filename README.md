@@ -6,8 +6,7 @@ Add it in your root build.gradle at the end of repositories:
 
 	allprojects {
 		repositories {
-			...
-			maven { url 'https://jitpack.io' }
+			jcenter()
 		}
 	}
   
@@ -15,5 +14,5 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        compile 'com.github.wuguangxin:slidingmenu:1.0.0'
+	        compile 'com.wuguangxin:slidingmenu:1.0.0'
 	}
