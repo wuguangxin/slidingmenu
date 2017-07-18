@@ -2,6 +2,11 @@ apply plugin: 'com.android.library'
 
 apply plugin: 'com.novoda.bintray-release' // bintray
 
+// 配置信息
+def mVersionCode = 2
+def mVersionName = "1.0.1"
+def mDescription = "对CustomViewAbove.onMeasure里的mContent.measure进行try catch，避免一直打印错误日志"
+
 android {
     compileSdkVersion 25
     buildToolsVersion '25.0.2'
@@ -9,8 +14,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        versionCode mVersionCode
+        versionName mVersionName
     }
 
     buildTypes {
@@ -47,7 +52,8 @@ publish {
     // 可变配置
     website = 'https://github.com/wuguangxin/slidingmenu'   // 项目的地址，不重要
     artifactId = 'slidingmenu'               // 上传到bintray里的Package Name(这里填什么就显示什么)
-    publishVersion ='1.0.0'                  // 引用版本号 (这里填什么就显示什么)
+    publishVersion = mVersionName            // 引用版本号 (这里填什么就显示什么)
     dryRun = false                           // false:上传，true：不上传
-    desc = '优化的SlidingMenu'       // 描述，不重要
+    desc = mDescription       // 描述，不重要
+    description = mDescription
 }
